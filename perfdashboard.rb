@@ -1,4 +1,4 @@
-require File.expand_path('../config/PerfDashboard', __FILE__)
+require File.expand_path('../config/perfdashboard', __FILE__)
 
 class PerfDashboard < Sinatra::Base
   set :root, File.expand_path('../', __FILE__)
