@@ -2,3 +2,21 @@
   border-left:0px;
   border-right:0px;
 }
+div.arrow-down {
+  width:0px; 
+  height:0px; 
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid #FF0000;
+  font-size:0px;
+  line-height:0px;
+}
+div.arrow-up {
+  width:0px;
+  height:0px;
+  border-bottom:5px solid #33ff33;
+  border-right:5px solid transparent;
+  border-left:5px solid transparent;
+  font-size:0px;
+  line-height:0px;
+}

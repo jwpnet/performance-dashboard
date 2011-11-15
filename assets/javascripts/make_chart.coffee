@@ -17,14 +17,22 @@ class MainDashboard
       $('#chart tbody').append(@makeRow k, v)
 
   makeRow: (k, v) ->
+    percent_change = @percentChange(v)
     """
       <tr>
         <td><strong>#{k}</strong></td>
         <td>Sparkline</td>
-        <td>#{@percentChange(v)}</td>
+        <td colspan="2">#{percent_change} #{@changeArrow(percent_change)}
+        </td>
         <td>#{v[v.length-1][1].toFixed(2)}
       </tr>
     """
+  
+  changeArrow: (number) ->
+    if number > 0
+      return "<div class='arrow-up'></div>"
+    else
+      return "<div class='arrow-down'></div>"
 
   percentChange: (dataArray) ->
     first = dataArray[0][1]
