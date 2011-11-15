@@ -21,9 +21,17 @@ class MainDashboard
       <tr>
         <td><strong>#{k}</strong></td>
         <td>Sparkline</td>
+        <td>#{@percentChange(v)}</td>
         <td>#{v[v.length-1][1].toFixed(2)}
       </tr>
     """
+
+  percentChange: (dataArray) ->
+    first = dataArray[0][1]
+    last = dataArray[dataArray.length-1][1]
+    change = first-last
+    percent_change = change/last * 100
+    percent_change.toFixed(1)
 
 $ ->
   window.PerformanceDashboard.MainDashboard = new MainDashboard
