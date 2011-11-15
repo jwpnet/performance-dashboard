@@ -20,7 +20,6 @@ class MainDashboard
       window.PerformanceDashboard.Sparkline.initializeEvents(v, "#"+sparkline_container)
       i += 1
 
-
   makeRow: (k, v, sparkline_container) ->
     percent_change = @percentChange(v)
     """
@@ -42,7 +41,7 @@ class MainDashboard
   percentChange: (dataArray) ->
     first = dataArray[0][1]
     last = dataArray[dataArray.length-1][1]
-    change = first-last
+    change = last-first
     percent_change = change/last * 100
     percent_change.toFixed(1)
 

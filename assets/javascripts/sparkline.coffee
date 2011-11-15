@@ -8,10 +8,10 @@ class Sparkline
 
   initializeEvents: (dataArray, column) ->
     values = @extractDataPoints(dataArray)
-    y = d3.scale.linear().domain([0, d3.max(values)]).range([0, h-margin])
+    console.log values
+    y = d3.scale.linear().domain([0, d3.max(values)]).range([h+margin, 0+margin])
     x = d3.scale.linear().domain([0, values.length-1]).range([0, w])
 
-    console.log column
     vis = d3.select(column)
       .append("svg:svg")
       .attr("width", w)
