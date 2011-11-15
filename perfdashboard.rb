@@ -1,6 +1,7 @@
 require File.expand_path('../config/perfdashboard', __FILE__)
 
 class PerfDashboard < Sinatra::Base
+
   set :root, File.expand_path('../', __FILE__)
   set :sprockets, Sprockets::Environment.new(root)
   set :precompile, [/\w+\.(?!js|css).+/, /applcation.(css|js)$/]
@@ -24,5 +25,12 @@ class PerfDashboard < Sinatra::Base
 
   get '/' do
     haml :index
+  end
+
+  get "/get_data/:app_name" do
+    content_type :json
+    data = JSON.parse File.open("#{DATA_DIR}/#{params[:app_name]}_dashboard_data.json").read
+
+    data.to_json
   end
 end

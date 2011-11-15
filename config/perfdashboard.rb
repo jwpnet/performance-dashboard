@@ -1,4 +1,5 @@
 SINATRA_ROOT = File.expand_path('../../', __FILE__)
+DATA_DIR = 'data'
 
 require 'bundler'
 Bundler.require
