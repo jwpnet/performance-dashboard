@@ -5,18 +5,27 @@
 div.arrow-down {
   width:0px; 
   height:0px; 
-  border-left:5px solid transparent;
-  border-right:5px solid transparent;
-  border-top:5px solid #FF0000;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:6px solid #FF0000;
   font-size:0px;
   line-height:0px;
 }
 div.arrow-up {
   width:0px;
   height:0px;
-  border-bottom:5px solid #33ff33;
-  border-right:5px solid transparent;
-  border-left:5px solid transparent;
+  border-bottom:6px solid #33ff33;
+  border-right:6px solid transparent;
+  border-left:6px solid transparent;
   font-size:0px;
   line-height:0px;
+}
+
+path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill:none;
+}
+line {
+  stroke: black;
 }
