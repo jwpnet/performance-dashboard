@@ -13,15 +13,20 @@ class MainDashboard
     )
 
   renderData: (chart_data) ->
+    i = 0
     for k, v of chart_data
-      $('#chart tbody').append(@makeRow k, v)
+      sparkline_container = "sparkline#{i}"
+      $('#chart tbody').append(@makeRow k, v, sparkline_container)
+      window.PerformanceDashboard.Sparkline.initializeEvents(v, "#"+sparkline_container)
+      i += 1
 
-  makeRow: (k, v) ->
+
+  makeRow: (k, v, sparkline_container) ->
     percent_change = @percentChange(v)
     """
       <tr>
         <td>#{k}</td>
-        <td class='sparkline'>#{window.PerformanceDashboard.Sparkline.initializeEvents(v)}</td>
+        <td id='#{sparkline_container}'></td>
         <td>#{@changeArrow(percent_change)}</td>
         <td><strong>#{percent_change}</strong></td>
         <td>#{v[v.length-1][1].toFixed(2)}
