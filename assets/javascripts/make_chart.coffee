@@ -28,7 +28,7 @@ class MainDashboard
         <td>#{k}</td>
         <td id='#{sparkline_container}'></td>
         <td>#{@changeArrow(percent_change)}</td>
-        <td><strong>#{percent_change}</strong></td>
+        <td><strong>#{percent_change}%</strong></td>
         <td>#{v[v.length-1][1].toFixed(2)}
       </tr>
     """
