@@ -3,7 +3,7 @@ window.PerformanceDashboard.Sparkline = {} unless window.PerformanceDashboard.Sp
 
 class Sparkline
   w = 50
-  h = 50
+  h = 20
   margin = 5
 
   initializeEvents: (dataArray, column) ->
