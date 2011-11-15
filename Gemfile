@@ -9,4 +9,5 @@ gem "uglifier"
 
 gem "json"
 gem "execjs"
+gem "awesome_print"
 
