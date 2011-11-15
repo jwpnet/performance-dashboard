@@ -10,7 +10,7 @@ class Sparkline
     values = @extractDataPoints(dataArray)
     console.log values
     y = d3.scale.linear().domain([0, d3.max(values)]).range([h, margin])
-    x = d3.scale.linear().domain([0, values.length-1]).range([0, w])
+    x = d3.scale.linear().domain([0, values.length-1]).range([0, w+margin])
 
     vis = d3.select(column)
       .append("svg:svg")
