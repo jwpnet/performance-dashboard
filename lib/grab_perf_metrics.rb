@@ -30,7 +30,12 @@ end
 def add_to_json(app_name, runtimes)
   ts = Time.now.to_i
   file_name = "#{@DATA_DIR}/#{app_name}#{@JSON_FILE_FORMAT}"
-  data_file = JSON.parse File.open("#{@DATA_DIR}/#{app_name}#{@JSON_FILE_FORMAT}").read
+  if File.exists? file_name
+    f = File.open(file_name).read
+    data_file = JSON.parse f
+  else
+    data_file = {}
+  end
 
   runtimes.each do |k, v|
     if data_file.keys.index(k).nil?
