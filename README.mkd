@@ -1,4 +1,4 @@
-#Performance Dashboard
+m#Performance Dashboard
 -------------------
 This is a simple dashboard used to display performance metrics at Absolute Performance. It's pretty versatile and could be used 
 to report on pretty much anything with a name, a number, and a timestamp. Some of the technologies used include Sinatra, 
@@ -23,4 +23,4 @@ Hopefully you'll have something like this:
 
 
 
-__*Just kidding. That is beyond my ability.__
+_*Just kidding. That is beyond my ability._
