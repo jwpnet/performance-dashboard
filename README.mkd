@@ -9,9 +9,12 @@ You can look at data/core_dashboard_data.json.example for an sample. The json da
 There is also a script to run performance tests and create json data files that is stored in lib/. 
 You need to specify the directory where your perf/ folder resides. The script will take the last child folder as the app name.
 
-To quickly set up and run...
+To quickly set up and run (on port 9292)...
 
 ```
 bundle
 bundle exec rackup
 ```
+
+Hopefully you'll have something like this:
+![screenshot](https://github.com/joannecheng/performance-dashboard/blob/master/assets/screenshot.png?raw=true)
