@@ -1,6 +1,7 @@
 #Performance Dashboard
 -------------------
-This is a simple dashboard in Sinatra used to display performance metrics at Absolute Performance. 
+This is a simple dashboard in Sinatra used to display performance metrics at Absolute Performance. It's pretty versatile and could be used 
+to report on pretty much anything with a name, a number, and a timestamp.
 
 The data is stored in the data/ folder, and the format is pretty self explanitory. 
 You can look at data/core_dashboard_data.json.example for an sample. The json data files need to be named [app_name]_dashboard_data.json.
