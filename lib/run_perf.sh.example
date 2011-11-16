@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+ruby lib/grab_perf_metrics.rb 'application directory here'
