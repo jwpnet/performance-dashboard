@@ -5,6 +5,7 @@ require 'awesome_print'
 #some important stuff...
 @DATA_DIR= "data"
 @JSON_FILE_FORMAT = "_dashboard_data.json"
+@MAX_HISTORY = 24
 
 #regex matches
 @test_name_re = /(^[A-Z]{3,} \w{3,} (from|to) \/\S+)/
@@ -41,6 +42,7 @@ def add_to_json(app_name, runtimes)
     if data_file.keys.index(k).nil?
       data_file[k] = [].push [ts, v.to_f]
     else
+      data_file[k].shift if data_file[k].length > @MAX_HISTORY
       data_file[k].push [ts, v.to_f]
     end
   end
