@@ -21,4 +21,6 @@ Hopefully you'll have something like this:
 ![screenshot](https://github.com/joannecheng/performance-dashboard/blob/master/assets/screenshot.png?raw=true)
 
 
-*Just kidding. That's beyond my ability.
+
+
+*Just kidding. That is beyond my ability.
