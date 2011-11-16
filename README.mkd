@@ -1,4 +1,15 @@
-Sinatra template, with Gemfiles/configurations I would probably use (such as coffeescript/sprockets, haml, bootstrap etc.)
+#Performance Dashboard
+-------------------
+This is a simple dashboard in Sinatra used to display performance metrics at Absolute Performance. It's pretty versatile and could be used 
+to report on pretty much anything with a name, a number, and a timestamp.
+
+The data is stored in the data/ folder, and the format is pretty self explanitory. 
+You can look at data/core_dashboard_data.json.example for an sample. The json data files need to be named [app_name]_dashboard_data.json.
+
+There is also a script to run performance tests and create json data files that is stored in lib/. 
+You need to specify the directory where your perf/ folder resides. The script will take the last child folder as the app name.
+
+To quickly set up and run...
 
 ```
 bundle
