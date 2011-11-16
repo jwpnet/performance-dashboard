@@ -1,4 +1,11 @@
-Sinatra template, with Gemfiles/configurations I would probably use (such as coffeescript/sprockets, haml, bootstrap etc.)
+#Performance Dashboard
+-------------------
+This is a simple dashboard used to display performance metrics at Absolute Performance. 
+
+The data is stored in the data/ folder, and the format is pretty self explanitory. You can look at data/core_dashboard_data.json.example for an sample.
+
+
+To run...
 
 ```
 bundle
