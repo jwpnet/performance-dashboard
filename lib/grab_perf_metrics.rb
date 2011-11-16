@@ -39,7 +39,7 @@ def add_to_json(app_name, runtimes)
 
   runtimes.each do |k, v|
     if data_file.keys.index(k).nil?
-      data_file[k] = [].push [ts, v]
+      data_file[k] = [].push [ts, v.to_f]
     else
       data_file[k].push [ts, v.to_f]
     end
@@ -48,7 +48,7 @@ def add_to_json(app_name, runtimes)
   write_file.puts data_file.to_json
 end
 
-#########
+#############
 app_paths = ARGV.map {|a| a }
 if app_paths.empty? 
   puts "USAGE: ruby grab_perf_metrics.rb 'application path' 'application path2' ..."
