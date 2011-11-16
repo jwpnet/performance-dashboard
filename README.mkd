@@ -1,7 +1,8 @@
 #Performance Dashboard
 -------------------
-This is a simple dashboard in Sinatra used to display performance metrics at Absolute Performance. It's pretty versatile and could be used 
-to report on pretty much anything with a name, a number, and a timestamp.
+This is a simple dashboard used to display performance metrics at Absolute Performance. It's pretty versatile and could be used 
+to report on pretty much anything with a name, a number, and a timestamp. Some of the technologies used include Sinatra, 
+coffeescript, twitter's bootstrap toolkit, d3, and a whole lot of love*.
 
 The data is stored in the data/ folder, and the format is pretty self explanitory. 
 You can look at data/core_dashboard_data.json.example for an sample. The json data files need to be named [app_name]_dashboard_data.json.
@@ -18,3 +19,6 @@ bundle exec rackup
 
 Hopefully you'll have something like this:
 ![screenshot](https://github.com/joannecheng/performance-dashboard/blob/master/assets/screenshot.png?raw=true)
+
+
+*Just kidding. That's beyond my ability.
