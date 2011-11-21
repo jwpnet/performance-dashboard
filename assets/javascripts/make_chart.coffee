@@ -3,6 +3,10 @@ window.PerformanceDashboard.MainDashboard = {} unless window.PerformanceDashboar
 
 class MainDashboard
   $app_name = ""
+
+  color = d3.scale.linear()
+    .domain([0, 50])
+    .range(['#404040', "#FF0000"])
   constructor: ()->
     $app_name = $('#app_name').html().toLowerCase()
     @initializeEvents()
@@ -34,7 +38,7 @@ class MainDashboard
   
   changeArrow: (number) ->
     if number > 0
-      return "<div class='arrow-up'></div>"
+      return "<div class='arrow-up' style='border-bottom:8px solid #{color(number)};'></div>"
     else
       return "<div class='arrow-down'></div>"
 
