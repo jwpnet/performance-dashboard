@@ -10,14 +10,13 @@ div.arrow-down {
   height:0px; 
   border-left:8px solid transparent;
   border-right:8px solid transparent;
-  border-top:8px solid #00CC00; 
+  border-top:8px solid #404040;
   font-size:0px;
   line-height:0px;
 }
 div.arrow-up {
   width:0px;
   height:0px;
-  border-bottom:8px solid #FF0000;
   border-right:8px solid transparent;
   border-left:8px solid transparent;
   font-size:8px;
