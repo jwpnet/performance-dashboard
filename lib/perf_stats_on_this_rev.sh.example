@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+cd $1
+rev=`git log -1 --pretty='format:%h' HEAD`
+time=`bundle exec rspec perf/ |
+  grep '^  RUNTIME: ' |
+  awk '{print $2}'
+`
+echo $rev,$time
