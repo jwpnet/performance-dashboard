@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+cur_dir=`pwd`
+cd $3
+sh run-command-on-git-revisions $1 $2 "sh "$cur_dir"/lib/perf_stats_on_this_rev.sh  >> stats.csv"
