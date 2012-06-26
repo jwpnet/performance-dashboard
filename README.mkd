@@ -2,13 +2,10 @@
 -------------------
 This is a simple dashboard used to display performance metrics at Absolute Performance. It's pretty versatile and could be used 
 to report on pretty much anything with a name, a number, and a timestamp. Some of the technologies used include Sinatra, 
-coffeescript, twitter's bootstrap toolkit, d3, and a whole lot of love*.
+coffeescript, twitter's bootstrap toolkit, and d3.js.
 
-The data is stored in the data/ folder, and the format is pretty self explanitory. 
-You can look at data/core_dashboard_data.json.example for an sample. The json data files need to be named [app_name]_dashboard_data.json.
-
-There is also a script to run performance tests (destroy all software style) and create json data files that is stored in lib/. 
-You need to specify the directory where your perf/ folder resides. The script will take the last child folder name as the app_name.
+The data is stored in the data/ folder. You can look at data/core_dashboard_data.json.example for the format. 
+The json files in data/ need to be named [app_name]_dashboard_data.json.
 
 To quickly set up and run (on port 9292)...
 
@@ -20,7 +17,3 @@ bundle exec rackup
 Hopefully you'll have something like this:
 ![screenshot](https://github.com/joannecheng/performance-dashboard/blob/master/assets/screenshot.png?raw=true)
 
-
-
-
-_*No._
